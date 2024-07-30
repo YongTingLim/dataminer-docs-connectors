@@ -16,6 +16,8 @@ This connector allows to monitor and configure the Pro-Bel Cygnus routing system
 |------------------|----------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version      | No                  | Yes                     |
 | 2.0.0.x          | Smart Serial version | No                  | Yes                     |
+| 3.0.0.x          | SNMP version         | No                  | Yes                     |
+
 
 ### Product Info
 
@@ -23,6 +25,7 @@ This connector allows to monitor and configure the Pro-Bel Cygnus routing system
 |------------------|-----------------------------|
 | 1.0.0.x          | -                           |
 | 2.0.0.x          | -                           |
+| 3.0.0.x          | -                           |
 
 ## Installation and configuration
 
@@ -64,7 +67,7 @@ SERIAL CONNECTION:
   - **IP port**: The IP port of the device.
   - **Bus address**: 1
 
-## Usage
+## Usage - Serial
 
 ### Matrix
 
@@ -83,3 +86,45 @@ This page allows to set advanced switching using the **Advanced Switching** para
 ### Matrix Status
 
 On this page an overview is given of the crosspoints (**Crosspoints**), the crosspoints buffer (**Crosspoints Buffer**), and status information (**Status Information** and **Communication Status**).
+
+## Usage - SNMP
+
+### General
+
+This page gives an overview of the general information of the controller. The active status and the controller name.
+
+### Matrices
+
+This page gives an overview of the Matrices.
+
+### Levels
+
+This page gives an overview of the Levels this device has. The Index is made up of {Matrix Id}.{Level Id}
+
+### Sources
+
+This page gives an overview of the sources. The Index is made up of {Matrix Id}.{Level Id}.{Source Id}.
+The display name of the sources can be configured using either the Alternative Name, 4 Character Name, 8 Character Name,  12 Character Name, or 16 Character Name. The format will be {Index}.{Choice}.\
+The Enabled and Lock states are used in the Matrix.
+
+#### Sources Association
+
+This pages gives an overview of the sources association, and its relative association sources.
+
+#### Sources Settings
+
+This page allowes you to configure the sources table display key. Using either the Alternative Name, 4 Character Name, 8 Character Name,  12 Character Name, or 16 Character Name. The format will be {Index}.{Choice}.
+
+### Destinations
+
+This page gives an overview of the destinations. The Index is made up of {Matrix Id}.{Level Id}.{Destination Id}.
+The display name of the destinations can be configured using either the Alternative Name, 4 Character Name, 8 Character Name,  12 Character Name, or 16 Character Name. The format will be {Index}.{Choice}.\
+The Enabled and Lock states are used in the Matrix.
+
+#### Destinations Settings
+
+This page allowes you to configure the destinations table display key. Using either the Alternative Name, 4 Character Name, 8 Character Name,  12 Character Name, or 16 Character Name. The format will be {Index}.{Choice}.
+
+### Matrix
+
+This page shows the Matrix.
